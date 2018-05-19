@@ -6,5 +6,11 @@ DEPENDENCIES
     path: test/fixtures/cookbooks/media_server-test
 
 GRAPH
+  apt (7.0.0)
   media_server (0.1.0)
+    ubuntu (>= 0.0.0)
+    unattended_upgrades (>= 0.0.0)
   media_server-test (0.1.0)
+  ubuntu (2.0.1)
+    apt (>= 0.0.0)
+  unattended_upgrades (0.3.0)

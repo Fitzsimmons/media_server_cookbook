@@ -6,3 +6,6 @@ description "media_server"
 version "0.1.0"
 issues_url "https://github.com/fitzsimmons/media_server/issues"
 source_url "https://github.com/fitzsimmons/media_server"
+
+depends "ubuntu"
+depends "unattended_upgrades"
