@@ -1,0 +1,30 @@
+---
+driver:
+  name: vagrant
+  customize:
+    cableconnected1: "on" # works around a networking problem introduced in Virtualbox 5.1
+
+transport:
+  ssh_key: .kitchen/docker_id_rsa
+  forward_agent: true
+
+provisioner:
+  name: chef_solo
+  product_name: chef
+  product_version: 13
+  environments_path: test/fixtures/environments
+  client_rb:
+    environment: media_server-test
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: ubuntu-18.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[media_server-test::setup]
+      - recipe[media_server::default]
+    attributes:

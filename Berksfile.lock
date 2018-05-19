@@ -1,0 +1,10 @@
+DEPENDENCIES
+  media_server
+    path: .
+    metadata: true
+  media_server-test
+    path: test/fixtures/cookbooks/media_server-test
+
+GRAPH
+  media_server (0.1.0)
+  media_server-test (0.1.0)
