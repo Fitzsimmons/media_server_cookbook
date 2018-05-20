@@ -8,6 +8,7 @@ transport:
   ssh_key: .kitchen/docker_id_rsa
   forward_agent: true
 
+
 provisioner:
   name: chef_solo
   product_name: chef
@@ -19,8 +20,18 @@ provisioner:
 verifier:
   name: inspec
 
+driver:
+  name: vagrant
+  provider: virtualbox
+  network:
+    - ["forwarded_port", {guest: 8989, host: 8989}] # sonarr
+    - ["forwarded_port", {guest: 9117, host: 9117}] # jackett
+    - ["forwarded_port", {guest: 9091, host: 9091}] # transmission
+    - ["forwarded_port", {guest: 32400, host: 32400}] # plex
+
 platforms:
   - name: ubuntu-18.04
+
 
 suites:
   - name: default

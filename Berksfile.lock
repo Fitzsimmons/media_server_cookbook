@@ -4,13 +4,46 @@ DEPENDENCIES
     metadata: true
   media_server-test
     path: test/fixtures/cookbooks/media_server-test
+  terraform
+    git: https://github.com/rosstimson/chef-terraform
+    revision: 34626fe79cf5e11edf058825ab0c894393e449f8
+    ref: 34626fe
 
 GRAPH
   apt (7.0.0)
+  apt-periodic (0.2.0)
+    apt (>= 0.0.0)
+  ark (2.2.1)
+    build-essential (>= 0.0.0)
+    seven_zip (>= 0.0.0)
+    windows (>= 0.0.0)
+  build-essential (8.1.1)
+    mingw (>= 1.1)
+    seven_zip (>= 0.0.0)
   media_server (0.1.0)
+    apt-periodic (>= 0.0.0)
+    plex (>= 0.0.0)
+    poise-archive (>= 0.0.0)
+    poise-service (>= 0.0.0)
+    sonarr (>= 0.0.0)
+    terraform (>= 0.0.0)
     ubuntu (>= 0.0.0)
-    unattended_upgrades (>= 0.0.0)
   media_server-test (0.1.0)
+  mingw (2.0.2)
+    seven_zip (>= 0.0.0)
+  plex (0.2.3)
+  poise (2.8.1)
+  poise-archive (1.5.0)
+    poise (~> 2.6)
+  poise-service (1.5.2)
+    poise (~> 2.0)
+  seven_zip (3.0.0)
+    windows (>= 0.0.0)
+  sonarr (1.0.3)
+    apt (>= 2.6.0)
+  terraform (1.0.2)
+    ark (~> 2.0)
+    build-essential (~> 8.0)
   ubuntu (2.0.1)
     apt (>= 0.0.0)
-  unattended_upgrades (0.3.0)
+  windows (4.2.2)
