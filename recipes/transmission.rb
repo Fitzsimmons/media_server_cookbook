@@ -2,6 +2,11 @@ include_recipe "media_server::media_user"
 
 package "transmission-daemon"
 package "transmission-remote-cli"
+
+service "transmission-daemon" do
+  action [:stop, :disable]
+end
+
 # package "zsh"
 
 directory "/home/#{node["media_server"]["media_user"]}/.config" do
@@ -18,6 +23,8 @@ template "/home/#{node["media_server"]["media_user"]}/.config/transmission-daemo
   source node["media_server"]["transmission"]["config_template_source"]
   owner node["media_server"]["media_user"]
   group node["media_server"]["media_user"]
+
+  notifies :restart, "poise_service[transmission-#{node["media_server"]["media_user"]}]"
 end
 
 poise_service "transmission-#{node["media_server"]["media_user"]}" do
