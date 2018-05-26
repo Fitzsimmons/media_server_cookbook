@@ -1,7 +1,8 @@
 default["apt"]["compile_time_update"] = true # needed because the terraform cookbook wants to pull in build-essential at compile time for some reason
 
 default["media_server"]["misc_packages"] = [
-  "ncdu"
+  "ncdu",
+  "quassel-core"
 ]
 
 default["media_server"]["media_user"] = "justinf"
