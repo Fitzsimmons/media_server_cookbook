@@ -36,6 +36,6 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[media_server-test::setup]
       - recipe[media_server::default]
+      - recipe[media_server-test::setup]
     attributes:

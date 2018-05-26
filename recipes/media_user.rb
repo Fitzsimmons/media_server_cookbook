@@ -9,4 +9,8 @@ user node["media_server"]["media_user"] do
   manage_home true
 end
 
-
+directory node["media_server"]["media_directory"] do
+  recursive true
+  owner node["media_server"]["media_user"]
+  group node["media_server"]["media_user"]
+end

@@ -6,6 +6,9 @@ default["media_server"]["misc_packages"] = [
 
 default["media_server"]["media_user"] = "justinf"
 default["media_server"]["media_user_password"] = "$6$7uOKwtRU$LRfk3bnG..5kr9VDm09Z/WVlITwoi6vKeBFlDdHrhcD25At.ZMkm3NoFONW1U59p1OeaXb2mpB7oAnIIvSPVp0" #changeme
+default["media_server"]["media_directory"] = "/mnt/media/justinf"
+
+default["media_server"]["allow_plex_to_delete_files"] = true
 
 default["media_server"]["transmission"]["config_template_source"] = "transmission-daemon-settings.json.erb"
 
