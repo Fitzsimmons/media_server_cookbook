@@ -24,3 +24,5 @@ poise_service "jackett" do
   user "jackett"
   command "/usr/bin/mono --debug /var/lib/jackett/JackettConsole.exe --NoRestart"
 end
+
+node.normal["media_server"]["advertised_services"]["Jackett"] = "9117"

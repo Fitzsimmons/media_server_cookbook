@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Media Server</title>
+	</head>
+
+	<body>
+		<h1>Media Server</h1>
+
+		<ul>
+			<% node["media_server"]["advertised_services"].each do |label, port| %>
+			<li><a href="#" onclick="javascript:window.location.port=<%= port %>"><%= label %></a>
+			<% end %>
+		</ul>
+	</body>
+</html>

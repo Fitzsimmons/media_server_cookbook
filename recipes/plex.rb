@@ -6,3 +6,5 @@ execute "allow plex to delete files" do
   command "setfacl --recursive --default --modify u:plex:rwX '#{node["media_server"]["media_directory"]}'"
   only_if { node["media_server"]["allow_plex_to_delete_files"] }
 end
+
+node.normal["media_server"]["advertised_services"]["Plex"] = "32400"

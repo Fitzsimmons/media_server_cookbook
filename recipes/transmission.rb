@@ -31,3 +31,5 @@ poise_service "transmission-#{node["media_server"]["media_user"]}" do
   command "/usr/bin/transmission-daemon --foreground"
   user node["media_server"]["media_user"]
 end
+
+node.normal["media_server"]["advertised_services"]["transmission"] = "9091"
