@@ -7,7 +7,10 @@ default["media_server"]["misc_packages"] = [
 
 default["media_server"]["media_user"] = "justinf"
 default["media_server"]["media_user_password"] = "$6$7uOKwtRU$LRfk3bnG..5kr9VDm09Z/WVlITwoi6vKeBFlDdHrhcD25At.ZMkm3NoFONW1U59p1OeaXb2mpB7oAnIIvSPVp0" #changeme
+default["media_server"]["media_user_pubkey"] = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP4X/L6nItAXnXpm5HX4hhkBKQz23gOqSEQL0IZrlspV justinf@ghoul"
+
 default["media_server"]["media_directory"] = "/mnt/media/justinf"
+default["media_server"]["media_user_is_admin"] = true
 
 default["media_server"]["allow_plex_to_delete_files"] = true
 
