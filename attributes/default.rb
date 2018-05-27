@@ -19,12 +19,7 @@ default["media_server"]["transmission"]["config_template_source"] = "transmissio
 default["media_server"]["sorttv"]["download_url"] = "https://downloads.sourceforge.net/project/sorttv/SortTV1.37.zip"
 default["media_server"]["sorttv"]["config_template_source"] = "sorttv.conf.erb"
 
-default["media_server"]["dynamic_dns"]["variables"] = {
-  aws_access_key: "abcd1234",
-  aws_secret_key: "efgh5678",
-  zone_id: "AZBBDD",
-  domain_name: "home.example.com"
-}
+default["media_server"]["dynamic_dns"]["data_bag_name"] = "dynamic_dns"
 
 # fetch latest terraform release number from github api
 terraform_metadata = JSON.parse(Net::HTTP.get(URI("https://api.github.com/repos/hashicorp/terraform/releases/latest")))

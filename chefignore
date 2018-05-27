@@ -108,6 +108,5 @@ knife.rb
 
 # Terraform #
 #############
-terraform/*
 provision.tf
 provision.sh
