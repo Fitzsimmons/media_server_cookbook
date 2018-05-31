@@ -8,4 +8,3 @@ file "#{node["media_server"]["media_directory"]}/TV/test.txt" do
   group node["media_server"]["media_user"]
   content "hello."
 end
-

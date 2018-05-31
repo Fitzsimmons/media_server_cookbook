@@ -16,7 +16,8 @@ Style/StringLiterals:
   EnforcedStyle: double_quotes
 
 Style/StringLiteralsInInterpolation:
-  EnforcedStyle: double_quotes Enabled: true
+  EnforcedStyle: double_quotes
+  Enabled: true
 
 Metrics/LineLength:
   Enabled: false
@@ -31,4 +32,7 @@ Style/IndentArray:
   Enabled: false
 
 Style/WordArray:
+  Enabled: false
+
+Style/SymbolArray:
   Enabled: false

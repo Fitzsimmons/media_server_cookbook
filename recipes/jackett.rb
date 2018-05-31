@@ -14,7 +14,7 @@ poise_archive "jackett" do
   # find latest release via github api
   metadata = JSON.parse(Net::HTTP.get(URI("https://api.github.com/repos/Jackett/Jackett/releases/latest")))
 
-  path metadata["assets"].find{|x| x["name"] == "Jackett.Binaries.Mono.tar.gz"}["browser_download_url"]
+  path metadata["assets"].find { |x| x["name"] == "Jackett.Binaries.Mono.tar.gz" }["browser_download_url"]
   destination "/var/lib/jackett"
   owner "jackett"
   group "jackett"

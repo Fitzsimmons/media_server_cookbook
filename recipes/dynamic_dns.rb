@@ -25,8 +25,8 @@ end
 
 file "/var/lib/dynamic-dns/variables.tfvars.json" do
   tfvars_bag = data_bag_item(node["media_server"]["dynamic_dns"]["data_bag_name"], "tfvars")
-  tfvars = tfvars_bag.raw_data.to_hash.select do |k, v|
-    %w(aws_access_key aws_secret_key zone_id domain_name).include?(k)
+  tfvars = tfvars_bag.raw_data.to_hash.select do |k, _v|
+    %w[aws_access_key aws_secret_key zone_id domain_name].include?(k)
   end
 
   content JSON.pretty_generate(tfvars)

@@ -1,6 +1,6 @@
 include_recipe "ubuntu"
 include_recipe "apt-periodic"
 
-for package_name in node["media_server"]["misc_packages"] do
+node["media_server"]["misc_packages"].each do |package_name|
   package package_name
 end
